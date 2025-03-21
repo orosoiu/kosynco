@@ -20,7 +20,7 @@ import ro.occam.kosynco.services.UserService;
 import static ro.occam.kosynco.security.Roles.ROLE_USER;
 
 @Controller(UserController.PREFIX)
-@ExecuteOn(TaskExecutors.IO)
+@ExecuteOn(TaskExecutors.VIRTUAL)
 @Secured(SecurityRule.IS_AUTHENTICATED)
 public class UserController implements UserControllerApi {
 

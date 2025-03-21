@@ -1,8 +1,8 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.micronaut.application") version "4.4.4"
-    id("io.micronaut.test-resources") version "4.4.4"
-    id("io.micronaut.aot") version "4.4.4"
+    id("io.micronaut.application") version "4.5.0"
+    id("io.micronaut.test-resources") version "4.5.0"
+    id("io.micronaut.aot") version "4.5.0"
 }
 
 version = "0.1"
@@ -34,15 +34,13 @@ dependencies {
     testImplementation("io.micronaut:micronaut-http-client")
 }
 
-
 application {
     mainClass = "ro.occam.kosynco.Application"
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("17")
-    targetCompatibility = JavaVersion.toVersion("17")
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
-
 
 graalvmNative.toolchainDetection = false
 
@@ -67,9 +65,8 @@ micronaut {
     }
 }
 
-
 tasks.named("dockerfileNative") {
-    jdkVersion = "17"
+    jdkVersion = "21"
 }
 
 

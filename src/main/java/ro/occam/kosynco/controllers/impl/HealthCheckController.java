@@ -10,7 +10,7 @@ import jakarta.annotation.security.PermitAll;
 import ro.occam.kosynco.dtos.HealthCheckResponse;
 
 @Controller("/healthcheck")
-@ExecuteOn(TaskExecutors.IO)
+@ExecuteOn(TaskExecutors.VIRTUAL)
 @PermitAll
 public class HealthCheckController {
 

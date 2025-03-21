@@ -22,7 +22,7 @@ import java.util.Optional;
 import static ro.occam.kosynco.security.Roles.*;
 
 @Controller(SyncController.PREFIX)
-@ExecuteOn(TaskExecutors.IO)
+@ExecuteOn(TaskExecutors.VIRTUAL)
 @Secured(SecurityRule.IS_AUTHENTICATED)
 public class SyncController implements SyncControllerApi {
 
